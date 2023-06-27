@@ -12,6 +12,7 @@ function invocarCallback(cb) {
    // Invoca/ejecuta el callback `cb`.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
+   cb();
 }
 
 function operacionMatematica(num1, num2, cb) {
@@ -19,6 +20,7 @@ function operacionMatematica(num1, num2, cb) {
    // El callback realiza una operación matemática, por lo que necesita de los dos números.
    // Retorna el resultado del callback pasándole como parámetros los números.
    // Tu código:
+   return cb(num1 + num2);
 }
 
 function sumarArray(arrayOfNumbers, cb) {
@@ -27,6 +29,11 @@ function sumarArray(arrayOfNumbers, cb) {
    // Este resultado debes pasárselo como argumento al callback recibido.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
+   var sumar = 0
+   for (var i = 0 ; i < arrayOfNumbers.length ; i ++){
+sumar = sumar + arrayOfNumbers[i]
+   }
+ cb (sumar);
 }
 
 function forEach(array, cb) {
